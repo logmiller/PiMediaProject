@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="android-14">
+    <CLASSES />
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$USER_HOME$/IdeaProjects/sdk/sources/android-14" />
+      <root url="file://$USER_HOME$/IdeaProjects/sdk/sources/android-15" />
+      <root url="file://$USER_HOME$/IdeaProjects/sdk/sources/android-16" />
+      <root url="file://$USER_HOME$/IdeaProjects/sdk/sources/android-17" />
+      <root url="file://$USER_HOME$/IdeaProjects/sdk/sources/android-18" />
+      <root url="file://$USER_HOME$/IdeaProjects/sdk/sources/android-19" />
+    </SOURCES>
+  </library>
+</component>

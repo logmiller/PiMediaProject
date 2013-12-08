@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="stream.pimedia"
+          android:versionCode="4"
+          android:versionName="1.1.2" >
+         <uses-sdk
+            android:minSdkVersion="15"
+            android:targetSdkVersion="17" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <application
+            android:allowBackup="true"
+            android:icon="@drawable/ic_launcher"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme" >
+        <activity
+                android:name="stream.pimedia.browser.BrowseActivity"
+                android:label="@string/title_activity_main" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+                android:name="stream.pimedia.upnp.UpnpRegistryService"
+                android:enabled="true" />
+        <service
+                android:name="stream.pimedia.musicplayer.BackgroundMusicService"
+                android:enabled="true" />
+        <service
+                android:name=".upnp.server.PiMediaUpnpServerService"
+                android:enabled="true" />
+
+        <activity
+                android:name="stream.pimedia.imageviewer.ImageViewerActivity"
+                android:label="@string/title_activity_image_viewer"
+                android:launchMode="singleInstance" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.LAUNCHER" />
+
+                <data android:mimeType="image/*" />
+            </intent-filter>
+        </activity>
+        <activity
+                android:name="stream.pimedia.settings.SettingsActivity"
+                android:label="@string/title_activity_settings" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+                android:name="stream.pimedia.settings.ImageViewerSettingsActivity"
+                android:label="@string/title_activity_image_viewer_settings" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <receiver android:name="stream.pimedia.imageviewer.ImageViewerBroadcastReceiver" >
+        </receiver>
+
+        <activity
+                android:name="stream.pimedia.player.MusicPlayerActivity"
+                android:label="@string/title_activity_music_player" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+                android:name="stream.pimedia.player.ThirdPartyMusicPlayerActivity"
+                android:label="@string/title_activity_music_player" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+                android:name="stream.pimedia.player.AVTransportPlayerActivity"
+                android:label="@string/title_activity_avtransport_player" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+                android:name="stream.pimedia.player.MultiContentPlayerActivity"
+                android:label="@string/title_activity_multi_content_player" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+                android:name="stream.pimedia.util.AboutActivity"
+                android:label="@string/pimedia_about" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+                android:name="stream.pimedia.upnp.server.PiMediaUpnpServerControlActivity"
+                android:label="@string/title_activity_pimedia_upnp_server_control" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>

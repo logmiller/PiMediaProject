@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MusicPlayerActivity" >
+
+     <RelativeLayout
+         android:id="@+id/thirdPartyMusicActivityControls"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:layout_alignParentBottom="true"
+         android:layout_alignParentLeft="true"
+         android:orientation="horizontal" >
+
+         <ImageButton
+             android:id="@+id/thirdPartyMusicActivityControlPrev"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignParentLeft="true"
+             android:layout_alignParentTop="true"
+             android:contentDescription="@string/previous"
+             android:src="@drawable/player_start" />
+
+         <ImageButton
+             android:id="@+id/thirdPartyMusicActivityControlPlay"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignParentTop="true"
+             android:layout_toRightOf="@+id/thirdPartyMusicActivityControlPrev"
+             android:contentDescription="@string/play"
+             android:src="@drawable/player_play" />
+
+         <ImageButton
+             android:id="@+id/thirdPartyMusicActivityControlPause"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignParentTop="true"
+             android:layout_toRightOf="@+id/thirdPartyMusicActivityControlPlay"
+             android:contentDescription="@string/pause"
+             android:src="@drawable/player_pause" />
+
+         <ImageButton
+             android:id="@+id/thirdPartyMusicActivityControlStop"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignParentTop="true"
+             android:layout_centerHorizontal="true"
+             android:layout_toRightOf="@+id/thirdPartyMusicActivityControlPause"
+             android:contentDescription="@string/stop"
+             android:src="@drawable/player_stop" />
+
+         <ImageButton
+             android:id="@+id/thirdPartyMusicActivityControlNext"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignParentTop="true"
+             android:layout_toRightOf="@+id/thirdPartyMusicActivityControlStop"
+             android:contentDescription="@string/next"
+             android:src="@drawable/player_end" />
+          <ImageButton
+             android:id="@+id/thirdPartyMusicActivityControlExit"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignParentTop="true"
+             android:layout_toRightOf="@+id/thirdPartyMusicActivityControlNext"
+             android:contentDescription="@string/exit"
+             android:src="@drawable/button_cancel" />
+     </RelativeLayout>
+
+     <ImageView
+         android:id="@+id/thirdPartyMusicActivityImageView"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_above="@+id/thirdPartyMusicActivityControls"
+         android:layout_alignParentLeft="true"
+         android:layout_alignParentRight="true"
+         android:layout_alignParentTop="true"
+         android:contentDescription="@string/musicActivityImageView"
+         android:src="@drawable/cdtrack" />
+
+</RelativeLayout>
